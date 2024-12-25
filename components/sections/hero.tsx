@@ -13,7 +13,7 @@ export function HeroSection() {
         <div className="w-full md:w-5/12 md:order-2">
           <div className="relative aspect-[4/3] w-full max-w-[500px] mx-auto">
             <Image
-              src="C:\Users\thesi\Downloads\sitesh-6\project\public\pic-removebg.png"
+              src="https://images.unsplash.com/photo-1605379399642-870262d3d051"
               alt="Developer workspace"
               fill
               priority
