@@ -8,7 +8,7 @@ const education = [
     title: 'B.Tech CSE (AIML) Bachelor Degree',
     subtitle: 'Suresh Gyan Vihar University , Jaipur, India',
     description:
-      'Harvard University is an educational institution that offers graduate, professional, and research programs in the fields of and public health.',
+      'Suresh Gyan Vihar University is an educational institution that offers graduate, professional, and research programs in the fields of and public health.',
     date: '2000 - 2024',
     isExpanded: true,
   },
