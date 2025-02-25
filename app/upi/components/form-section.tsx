@@ -24,9 +24,9 @@ const paymentTypes = [
 
 export function FormSection() {
   const [formData, setFormData] = useState({
-    merchantName: 'Sitesh Kumar',
+    merchantName: '',
     paymentType: 'upi',
-    upiId: 'thesitesh@ybl',
+    upiId: '',
     accountNumber: '',
     ifscCode: '',
     amount: '',

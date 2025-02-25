@@ -55,7 +55,7 @@ export function QRPreview({ formData }: QRPreviewProps) {
       <div className="space-y-6">
         <div className="text-center">
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">
-            {formData.merchantName}
+            {formData.merchantName || "SITESH KUMAR"}
           </h2>
           <div className="flex justify-center mb-4">
             <QRCodeSVG
@@ -65,7 +65,7 @@ export function QRPreview({ formData }: QRPreviewProps) {
               includeMargin
             />
           </div>
-          <p className="text-sm text-gray-600 mb-8">{formData.upiId}</p>
+          <p className="text-sm text-gray-600 mb-8">{formData.upiId || "thesitesh@ybl"}</p>
         </div>
 
         <div>

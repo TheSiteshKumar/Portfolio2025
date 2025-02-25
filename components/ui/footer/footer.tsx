@@ -38,19 +38,17 @@ export function Footer() {
               { label: "Web Development", href: "#" },
               { label: "Mobile Apps", href: "#" },
               { label: "UI/UX Design", href: "#" },
-              { label: "Consulting", href: "#" }
+              
             ]}
           />
 
-          {/* Contact Info */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-white">Contact</h3>
-            <div className="space-y-2 text-sm">
-              <p>Bihar, India</p>
-              <p>hello@siteshkumar.com</p>
-             
-            </div>
-          </div>
+          <FooterColumn
+            title="Tools"
+            links={[
+              { label: "UPI QR Code Generator", href: "./upi" },
+           
+            ]}
+          />
         </div>
 
         {/* Bottom Bar */}
