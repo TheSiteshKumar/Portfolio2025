@@ -12,7 +12,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="group bg-white rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden border border-gray-200 hover:border-gray-300">
+    <div className="group bg-white rounded-xl shadow-sm hover:shadow-md transition-all overflow-hidden border border-gray-200 hover:border-gray-300 flex flex-col">
       {/* Project Image with Container */}
       <div className="relative aspect-video w-full border-b border-gray-100 bg-gray-50 p-1.5">
         <div className="relative h-full w-full overflow-hidden rounded-lg">
@@ -31,7 +31,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </div>
 
       {/* Content */}
-      <div className="p-6 space-y-4">
+      <div className="p-6 flex flex-col flex-1 gap-4">
         <div className="space-y-3">
           <h3 className="text-xl font-semibold text-gray-900">{project.title}</h3>
           <p className="text-gray-600 line-clamp-2 text-[15px] leading-snug">
@@ -67,34 +67,39 @@ export function ProjectCard({ project }: ProjectCardProps) {
           </div>
         </div>
 
-        {/* Actions */}
-        <div className="flex gap-3 pt-2">
-          <Button asChild className="flex-1 bg-blue-600 text-white hover:bg-blue-700 shadow-sm">
-            <a
-              href={project.demoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2"
+        {/* Actions - Pushed to bottom with fixed height */}
+        <div className="mt-auto pt-4">
+          <div className="flex gap-3 h-10">
+            <Button 
+              asChild 
+              className="flex-1 bg-blue-600 text-white hover:bg-blue-700 shadow-sm h-full"
             >
-              <ExternalLink className="w-4 h-4" />
-              Live Demo
-            </a>
-          </Button>
-          <Button 
-            variant="outline" 
-            asChild 
-            className="flex-1 border-gray-300 hover:bg-gray-50 text-gray-700"
-          >
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2"
+              <a
+                href={project.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2"
+              >
+                <ExternalLink className="w-4 h-4" />
+                Live Demo
+              </a>
+            </Button>
+            <Button 
+              variant="outline" 
+              asChild 
+              className="flex-1 border-gray-300 hover:bg-gray-50 text-gray-700 h-full"
             >
-              <Github className="w-4 h-4" />
-              Source Code
-            </a>
-          </Button>
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2"
+              >
+                <Github className="w-4 h-4" />
+                Source Code
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
     </div>
