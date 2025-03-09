@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { HeroButton } from "@/components/ui/hero-button";
 import { HeroStats } from "./hero/hero-stats";
 import { HeroSocial } from "./hero/hero-social";
@@ -37,12 +38,16 @@ export function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <HeroButton className="bg-blue-600 text-white hover:bg-blue-700">
-              View Projects
-            </HeroButton>
-            <HeroButton className="bg-gray-100 text-gray-700 hover:bg-gray-200">
-              Contact Me
-            </HeroButton>
+            <Link href="/projects" passHref>
+              <HeroButton className="bg-blue-600 text-white hover:bg-blue-700">
+                View Projects
+              </HeroButton>
+            </Link>
+            <Link href="/contact" passHref>
+              <HeroButton className="bg-gray-100 text-gray-700 hover:bg-gray-200">
+                Contact Me
+              </HeroButton>
+            </Link>
           </div>
 
           <HeroSocial />
