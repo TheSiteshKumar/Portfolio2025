@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <g transform="matrix(1, 0, 0, 1, 0, 0)">
+    <path d="M 250 50 C 138.497 50 48.433 140.064 48.433 251.567 C 48.433 363.07 138.497 453.134 250 453.134 C 361.503 453.134 451.567 363.07 451.567 251.567 C 451.567 140.064 361.503 50 250 50 Z" style="fill: rgb(240, 244, 255);"/>
+    <g transform="matrix(0.707107, -0.707107, 0.707107, 0.707107, -104.019, 251.567)">
+      <rect x="200" y="150" width="100" height="200" rx="10" style="fill: rgb(59, 130, 246);"/>
+      <rect x="220" y="180" width="60" height="10" rx="5" style="fill: white;"/>
+      <rect x="220" y="200" width="60" height="10" rx="5" style="fill: white;"/>
+      <rect x="220" y="220" width="40" height="10" rx="5" style="fill: white;"/>
+    </g>
+  </g>
+</svg>
