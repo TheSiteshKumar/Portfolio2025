@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 interface ServiceCardProps {
-  icon: LucideIcon;
+  icon: React.ElementType;
   title: string;
   description: string;
   iconColor: string;
