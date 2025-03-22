@@ -16,12 +16,14 @@ const contactTypes = [
     id: 'service', 
     label: 'Service Inquiry',
     icon: PhoneCall,
-    description: 'Discuss your project requirements and get a callback'
+    description: 'Discuss your project requirements and ',
+    preferred: true, // New preferred flag
+    callbackText: 'get a callback' // Added separate callback text
   },
 ];
 
 export function ContactOptions() {
-  const [selectedType, setSelectedType] = useState('general');
+  const [selectedType, setSelectedType] = useState('service'); // Default to service
 
   return (
     <div className="container mx-auto px-4 py-24 bg-gray-50" id="contact-form">
@@ -39,28 +41,45 @@ export function ContactOptions() {
               <button
                 key={type.id}
                 onClick={() => setSelectedType(type.id)}
-                className={`p-6 rounded-xl border text-left transition-all ${
+                className={`p-6 rounded-xl border-2 text-left transition-all relative ${
                   selectedType === type.id
                     ? 'bg-blue-50 border-blue-200'
-                    : 'bg-white border-gray-200 hover:border-blue-200'
+                    : type.preferred
+                    ? 'border-green-200 hover:border-green-300' // Preferred styling
+                    : 'border-gray-200 hover:border-blue-200'
                 }`}
               >
+                {/* Preferred badge */}
+                {type.preferred && (
+                  <span className="absolute top-2 right-2 bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">
+                    Call Back
+                  </span>
+                )}
+                
                 <div className="flex items-center gap-3 mb-2">
                   <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${
-                    selectedType === type.id ? 'bg-blue-100' : 'bg-gray-100'
+                    selectedType === type.id ? 'bg-blue-100' : 
+                    type.preferred ? 'bg-green-100' : 'bg-gray-100'
                   }`}>
                     <type.icon className={`w-5 h-5 ${
-                      selectedType === type.id ? 'text-blue-600' : 'text-gray-600'
+                      selectedType === type.id ? 'text-blue-600' : 
+                      type.preferred ? 'text-green-600' : 'text-gray-600'
                     }`} />
                   </div>
                   <h3 className={`font-semibold ${
-                    selectedType === type.id ? 'text-blue-600' : 'text-gray-900'
+                    selectedType === type.id ? 'text-blue-600' : 
+                    type.preferred ? 'text-green-700' : 'text-gray-900'
                   }`}>
                     {type.label}
                   </h3>
                 </div>
                 <p className="text-sm text-gray-600 ml-13">
                   {type.description}
+                  {type.callbackText && (
+                    <span className="text-blue-600 font-semibold">
+                      {type.callbackText}
+                    </span>
+                  )}
                 </p>
               </button>
             ))}
