@@ -30,5 +30,15 @@ export const projects: Project[] = [
     tags: ["E-commerce", "Agriculture", "Business"],
     demoUrl: "https://parlegg.com/",
     githubUrl: "https://github.com/TheSiteshKumar/parlegg"
-  }
+  },
+  {
+    id: 4,
+    title: "FuzenAI Blog",
+    description: "Modern WordPress blog platform featuring SEO-optimized content, multi-author support, and integrated newsletter system for AI writing insights.",
+    image: "https://res.cloudinary.com/dctevx0rr/image/upload/v1742628705/siteshkumar.com/Fuzenai.png",
+    techStack: ["WordPress", "Oxygen Builder", "", "Rank Math", "Cloudflare"],
+    tags: ["Content Marketing", "AI Blogging", "CMS"],
+    demoUrl: "https://blog.fuzenai.com/",
+    githubUrl: null
+}
 ];
