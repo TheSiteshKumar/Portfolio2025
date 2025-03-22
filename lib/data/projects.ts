@@ -39,6 +39,6 @@ export const projects: Project[] = [
     techStack: ["WordPress", "Oxygen Builder", "", "Rank Math", "Cloudflare"],
     tags: ["Content Marketing", "AI Blogging", "CMS"],
     demoUrl: "https://blog.fuzenai.com/",
-    githubUrl: null
+    githubUrl: "#"
 }
 ];
