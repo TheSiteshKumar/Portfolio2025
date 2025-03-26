@@ -55,7 +55,8 @@ export const projects: Project[] = [
     description:
       "A collection of AI-powered tools for productivity, creativity, and automation, offering seamless user experience with powerful integrations.",
     image:
-      "https://res.cloudinary.com/dctevx0rr/image/upload/v1742628705/siteshkumar.com/MagicTools.png",
+      "https://res.cloudinary.com/dctevx0rr/image/upload/v1743004976/siteshkumar.com/magictools.png",
+      
     techStack: ["React.js", "TypeScript", "Tailwind CSS","framer-motion"],
     tags: ["Tools", "Productivity", "Automation"],
     demoUrl: "https://magictools.netlify.app/",
