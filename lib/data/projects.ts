@@ -62,4 +62,16 @@ export const projects: Project[] = [
     demoUrl: "https://magictools.netlify.app/",
     githubUrl: "#",
   },
+  {
+    id: 6,
+    title: "AIOIT Institute Website",
+    description:
+      "An informative and responsive website for AIOIT, featuring details about courses, admissions, and departments.",
+    image:
+      "https://res.cloudinary.com/dctevx0rr/image/upload/v1745498205/siteshkumar.com/aioit.png",
+    techStack: ["React.js", "Tailwind CSS", "Framer Motion"],
+    tags: ["College", "Education", "Responsive Website"],
+    demoUrl: "https://aioit.netlify.app/",
+    githubUrl: "#",
+  },
 ];
